@@ -1,11 +1,11 @@
-﻿// We don't need to provide AWS credentials
-// as the machine that is running is authenticated already.
-// so this client will be able to perform actions in that account.
-using Amazon.SQS;
+﻿using Amazon.SQS;
 using Amazon.SQS.Model;
 
-var cts = new CancellationTokenSource();
+// We don't need to provide AWS credentials
+// as the machine that is running is authenticated already.
+// so this client will be able to perform actions in that account.
 var sqsClient = new AmazonSQSClient();
+var cts = new CancellationTokenSource();
 
 // The code might be agnostic of things like the
 // region or the account number and you might only know
